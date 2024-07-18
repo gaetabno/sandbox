@@ -4,7 +4,7 @@ export let IntersectionObserverFunc = () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // L'elemento è visibile
-                // console.log('Elemento visibile:', entry.target);
+                 console.log('Elemento visibile:', entry.target);
                 // Esegui qualche azione, ad esempio carica un'immagine
                 // entry.target.src = entry.target.dataset.src;
 
@@ -12,7 +12,9 @@ export let IntersectionObserverFunc = () => {
                 entry.target.classList.add('watch')
                 // Smetti di osservare se non serve più
                 observer.unobserve(entry.target);
-            }  
+            }  else {
+                console.log('Elemento uscente:', entry.target);
+            }
         });
     };
 
