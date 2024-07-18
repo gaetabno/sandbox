@@ -1,6 +1,6 @@
 <script>
   export let trigger;
-  import Observer from "./../../../lib/components/Observer.svelte";
+  import Observer from "$lib/components/Observer.svelte";
   let color = Math.floor(Math.random() * 16777215).toString(16);
   let watch = false; 
 </script>
