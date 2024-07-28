@@ -1,0 +1,78 @@
+.c-field {
+    grid-template-rows: repeat(15, 2.5vw);
+
+    &__row {
+        grid-template-columns: repeat(20, 2.5vw);
+
+        &:nth-of-type(2n) {
+            >div:nth-child(even) {
+                background-color: #2fae1b;
+            }
+
+            >div:nth-child(odd) {
+                background-color: #089f0b;
+            }
+        }
+
+        &:nth-of-type(2n-1) {
+            >div:nth-child(odd) {
+                background-color: #2fae1b;
+            }
+
+            >div:nth-child(even) {
+                background-color: #089f0b;
+            }
+        }
+    }
+
+    &__box {
+        width: 100%;
+        width: 100%;
+
+        &.cherry {
+            background-image: url(./assets/cherry.png);
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        &.snake-head {
+            background-image: url(./assets/snake-head.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        &.snake-body {
+            background-image: url(./assets/snake-body.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        &.snake-tail {
+            background-image: url(./assets/snake-tail.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        &.rotate {
+            &-top {
+                transform: rotate(0deg);
+            }
+
+            &-right {
+                transform: rotate(90deg);
+            }
+
+            &-bottom {
+                transform: rotate(180deg);
+            }
+
+            &-left {
+                transform: rotate(270deg);
+            }
+        }
+    }
+}
