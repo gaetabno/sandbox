@@ -1,6 +1,5 @@
 <script>
-  import { menu } from "$lib/index.js";
-  import { onMount } from "svelte";
+  import { menu } from "$lib/index.js"; 
   import { page } from "$app/stores";
 
   let currentMenu = [...$menu];
@@ -39,3 +38,5 @@
     <slot />
   </div>
 </main>
+
+
