@@ -1,5 +1,7 @@
 <script>
     export let cell;
+
+    $: cell;
     
 </script>
 

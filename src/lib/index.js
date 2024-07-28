@@ -9,16 +9,22 @@ import {
 export let menu = writable([{
     name: "home",
     uri: "/"
-}, {
+}, 
+{
     name: "Intersection Observer",
     uri: "/intersection-observer"
-}])
+}, 
+{
+    name: "Snake",
+    uri: "/snake"
+}
+])
 
 export const selectItemMenu = (el, menu) => {
-    console.log(el.target,menu)
+    console.log(el.target, menu)
     menu.map(item => {
-         (item.uri === el.target.href) ? item.selected = true : item.selected = false
+        (item.uri === el.target.href) ? item.selected = true: item.selected = false
 
-         menu = [...menu]
+        menu = [...menu]
     })
 }

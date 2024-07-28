@@ -3,7 +3,7 @@
   import { grid } from "$lib/snake.js";
 </script>
 
-<div class="c-field grid justify-center">
+<div class="c-field grid justify-center w-100vw h-100svh">
   {#each $grid as row} 
       <RowField {row} /> 
   {/each}
