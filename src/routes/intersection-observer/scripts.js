@@ -11,16 +11,19 @@ export let IntersectionObserverFunc = () => {
                 // Aggiungi classe watch
                 entry.target.classList.add('watch')
                 // Smetti di osservare se non serve più
-                observer.unobserve(entry.target);
-            }  
+                //  observer.unobserve(entry.target);
+            } else {
+                console.log('Elemento uscente:', entry.target);
+                entry.target.classList.remove('watch')
+            }
         });
     };
 
     // 2. Crea un'istanza di IntersectionObserver
     const options = {
-        root: null, // Il viewport del browser
-        rootMargin: '0px', // Margini aggiuntivi intorno al root
-        threshold: 0.6 // Percentuale di visibilità necessaria per attivare il callback
+        // root: null, // Il viewport del browser
+        // rootMargin: '0px', // Margini aggiuntivi intorno al root
+        threshold: 0.5 // Percentuale di visibilità necessaria per attivare il callback
     };
 
     const observer = new IntersectionObserver(callback, options);
